@@ -35,7 +35,32 @@
 #set heading(numbering: "1.1")
 = 计算
 == 角度单位
-你是否曾
+你是否曾疑惑过自己的计算器$cos(pi)=0.998dots.c$而不是0，
+大概率是你角度单位设置错误。
+#align(center)[
+#table(
+  align: center+horizon,
+  columns: 2,
+  stroke: none,
+  [#figure(
+    image("image/degree.jpg",width: 70%),
+    caption: "角度模式"
+  )],
+  [#figure(
+    image("image/radian.jpg",width: 70%),
+    caption: "弧度模式"
+  )]
+)
+]
+注意到上方两张图有何不同了吗，看到显示屏的第一排，
+一个显示#text(fill: white)[#highlight(fill: black,top-edge: 1.05em,extent: 0.1em)[*D*]]
+一个显示#text(fill: white)[#highlight(fill: black,top-edge: 1.05em,extent: 0.1em)[*R*]]，
+分别代表角度值和弧度制。在角度制下$cos(pi degree)=0.998dots.c$
+
+那么该如何切换角度值和弧度制呢，开机键的左侧有一个按钮，
+用黄色字体标注了_设置_，先按下_shift_再按下该键，
+注意到进入的菜单第二项就是角度单位，按_2_进入子菜单修改即可。
+
 == 任意一元方程的计算
 
 == 排列数组合数
