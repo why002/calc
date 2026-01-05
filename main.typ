@@ -66,7 +66,7 @@
 以$-e^(x) (ln(x)+1/ln(x))=3$为例（应该没有什么东西能算出来解析解吧）
 #figure(
   image("image/function.svg",width:  60%),
-  caption: "geogebra绘制函数图像"
+  caption: "Geogebra绘制函数图像"
 )
 借助Geogebra可以算出$x_1=0.1043,x_2=0.40133$，在考试中，我们肯定没有这种工具，那么我们该如何使用计算器解出该方程的数值解呢。
 
