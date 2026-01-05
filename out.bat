@@ -1,0 +1,1 @@
+pandoc out.typ -o out.md
