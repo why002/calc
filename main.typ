@@ -126,3 +126,31 @@ $
   ) 
 }
 在带入数据的时候，如果忘记了这些常量的值，可以去找一找。
+
+= 复数
+= 基数
+= 矩阵
+= 向量
+= 统计
+== 常用统计量计算
+假设有数据1.2, 2.4, 1.8, 1.5, 1.6, 1.7, 0.8，需要计算它们的平均值，方差。
+
+切换模式为_统计_选择_单变量统计_在表格中输入数据，按下_OPTN_，选择_单变量计算_，
+你会发现#context[$overline(x),sum x,sum x^2,sigma^2,sigma,S^2,S$]均帮你计算完成了。
+#align(center)[
+#table(
+  align: center+horizon,
+  columns: 2,
+  stroke: none,
+  [#figure(
+    image("image/stat1.jpg",width: 70%),
+    caption: "表格中输入数据"
+  )],
+  [#figure(
+    image("image/stat2.jpg",width: 70%),
+    caption: "计算结果"
+  )]
+)
+]
+= 表格
+= 方程
