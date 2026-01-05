@@ -9,6 +9,7 @@
 #show strong: set text(font: ("Times New Roman","SimHei"),weight: "bold") //加粗字体
 #show emph:set text(font:("Times New Roman","KaiTi"))//斜体字体
 #set par(first-line-indent: (amount: 2em,all:true),leading: 1.2em,spacing: 1.5em)
+#show math.equation.where(block: false):math.display
 #align(center+horizon)[
   #text(font:"SimHei",size: 30pt)[
     常用计算器使用方法
@@ -24,7 +25,7 @@
 #heading(depth: 1,numbering: none)[
   0 前言
 ]
-本文以*卡西欧fx-991CN X*为例，写一些在考试、做题之中还算实用的一些操作，
+本文以 *卡西欧fx-991CN X* 为例，写一些在考试、做题之中还算实用的一些操作，
 希望看此文的能至少会一些基本的操作，例如如何使用_shift alpha_按键。
 
 #figure(
@@ -53,8 +54,8 @@
 )
 ]
 注意到上方两张图有何不同了吗，看到显示屏的第一排，
-一个显示#text(fill: white)[#highlight(fill: black,top-edge: 1.05em,extent: 0.1em)[*D*]]
-一个显示#text(fill: white)[#highlight(fill: black,top-edge: 1.05em,extent: 0.1em)[*R*]]，
+一个显示#text(fill: white)[#highlight(fill: black,top-edge: 1.05em,extent: 0.1em)[ *D* ]]
+一个显示#text(fill: white)[#highlight(fill: black,top-edge: 1.05em,extent: 0.1em)[ *R* ]]，
 分别代表角度值和弧度制。在角度制下$cos(pi degree)=0.998dots.c$
 
 那么该如何切换角度值和弧度制呢，开机键的左侧有一个按钮，
@@ -62,6 +63,40 @@
 注意到进入的菜单第二项就是角度单位，按_2_进入子菜单修改即可。
 
 == 任意一元方程的计算
+以$-e^(x) (ln(x)+1/ln(x))=3$为例（应该没有什么东西能算出来解析解吧）
+#figure(
+  image("image/function.svg",width:  60%),
+  caption: "geogebra绘制函数图像"
+)
+借助Geogebra可以算出$x_1=0.1043,x_2=0.40133$，在考试中，我们肯定没有这种工具，那么我们该如何使用计算器解出该方程的数值解呢。
+
+_CALC_上方有一个黄色的_SOLVE_和一个红色的_=_，我们主要使用这两个按键来计算方程。将方程输入计算器，
+按下_SOLVE_，在此界面输入X的初始值，计算器会使用牛顿法计算方程的解析解。
+#align(center)[
+#table(
+  align: center+horizon,
+  columns: 2,
+  stroke: none,
+  [#figure(
+    image("image/solve1.jpg",width: 70%),
+    caption: "初始值设定"
+  )],
+  [#figure(
+    image("image/solve2.jpg",width: 70%),
+    caption: "一次未能计算出结果"
+  )],
+  [#figure(
+    image("image/solve3.jpg",width: 70%),
+    caption: "方程结果1"
+  )],
+  [#figure(
+    image("image/solve4.jpg",width: 70%),
+    caption: "方程结果2"
+  )]
+)
+]
+计算结果中除了$x$，还有$L-R$代表此时方程左右两端的差值，如果很大的话，代表此时并不是方程的根，需要重新选择初始值。
+要想得到多个根方程的其他根，也需要重新选取初始值。
 
 == 排列数组合数
 注意到_$times,div$_上有黄色字体_nPr,nCr_，他们是排列数和组合数。对应关系如下，
@@ -91,4 +126,3 @@ $
   ) 
 }
 在带入数据的时候，如果忘记了这些常量的值，可以去找一找。
-
